@@ -1,0 +1,102 @@
+.answers li {
+list-style: upper-alpha;
+}
+
+label {
+margin-left: 0.5em;
+cursor: pointer;
+}
+
+#results {
+background: #dddada;
+color: 000000;
+padding: 3px;
+text-align: center;
+width: 200px;
+cursor: pointer;
+border: 1px solid gray;
+}
+
+#results:hover {
+background: #3d91b8;
+color: #ffffff;
+padding: 3px;
+text-align: center;
+width: 200px;
+cursor: pointer;
+border: 1px solid gray;
+}
+
+#categorylist {
+margin-top: 6px;
+display: none;
+}
+
+#category1, #category2, #category3, #category4, #category5, #category6, #category7, #category8, #category9, #category10, #category11 {
+display: none;
+}
+
+#closing {
+display: none;
+font-style: italic;
+} 
+
+
+/* qknowGH styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+  background-image: url('../images/background.jpg');
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #f5f5f5;
+}
+
+
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+
+body > .container {
+  padding: 60px 15px 0;
+}
+.container .text-muted {
+  margin: 20px 0;
+}
+
+.footer > .container {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+code {
+  font-size: 80%;
+}
+
+.navbar-brand {
+  float: left;
+  height: 50px;
+  padding: 5px;
+  font-size: 18px;
+  line-height: 20px;
+}
+
+.navbar-default {
+  background-color: #FFF;
+  border-color: #F8F8F8;
+}
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+  color: #555;
+  background-color: #FFF;
+}
