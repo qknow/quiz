@@ -1,0 +1,35 @@
+{"quizlist":[
+  
+	{
+	"question":"Which is greater?",
+	"option1":"4_cats.png",
+	"option2":"3_dogs.png"
+	},
+	{
+	"question":"Which is greater?",
+	"option1":"4-buses.png",
+	"option2":"2-cars.png"
+	},
+	{
+	"question":"Which is greater?",
+	"option1":"6-pens.png",
+	"option2":"1-pencil.png"
+	},
+	{
+	"question":"Which is greater?",
+	"option1":"6-girls.png",
+	"option2":"5-boys.png"
+	},
+	{
+	"question":"Which is greater?",
+	"option1":"10-men.png",
+	"option2":"9-women.png"
+	},
+	{
+	"question":"Which is greater?",
+	"option1":"4-bowls.png",
+	"option2":"3-plates.png"
+	}
+
+]
+}

@@ -1,0 +1,40 @@
+{"quizlist":[
+  
+	{
+	"question":"Which is less?",
+	"option1":"8-apples.png",
+	"option2":"10-oranges.png"
+	},
+	{
+	"question":"Which is less?",
+	"option1":"4-triangles.png",
+	"option2":"6-circles.png"
+	},
+	{
+	"question":"Which is less?",
+	"option1":"3-squares.png",
+	"option2":"5-rectangles.png"
+	},
+	{
+	"question":"Which is less?",
+	"option1":"4-cars.png",
+	"option2":"7-boats.png"
+	},
+	{
+	"question":"Which is less?",
+	"option1":"6-chairs.png",
+	"option2":"9-tables.png"
+	},
+	{
+	"question":"Which is less?",
+	"option1":"1-boy.png",
+	"option2":"2-girls.png"
+	},
+	{
+	"question":"Which is less?",
+	"option1":"4-coconuts.png",
+	"option2":"8-bananas.png"
+	}
+
+]
+}
