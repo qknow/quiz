@@ -196,10 +196,11 @@ function checkAnswer() {
 }
 
 function showFinalResults() {
-  content.innerHTML = "<h2>You've completed the quiz!</h2>" +
-    "<h2>Below are your results:</h2>" +
-    "<h2>" + score + " out of " + quiz.length + " questions, " +
-    Math.round(score / quiz.length * 100) + "%<h2>";
+  content.innerHTML = 
+    "<h3>You've completed the quiz!</h3>" +
+    "<h3>Below are your results:</h3>" +
+    "<h3>" + score + " out of " + quiz.length + " questions, " + Math.round(score / quiz.length * 100) + "%<h3>" + 
+    "<br><h4><a href=''><u>Try again...!!</u></a></h4>";
 }
 
 window.addEventListener("load", askQuestion, false);
