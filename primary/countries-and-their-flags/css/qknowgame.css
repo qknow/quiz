@@ -100,12 +100,12 @@
 
  }
 #banderas{
-	margin-left: 15%;
+	margin-left: 0%;
 }
  #banderas,#monumentos{
  	text-align: center;
-  	width: 30em;
- 	height: auto;
+  	width: 60em;
+ 	height: 15em;
  	background: rgba(255,255,255,0.6);
  }
 h1{

@@ -25,12 +25,16 @@ body {
 }
 #container {
   margin: auto;
-  max-width: 640px;
-  padding: 0 15px;
+  max-width: 740px;
+  padding: 0 95px;
 }
 
 </style>
+
+
 </head>
+
+
   <body>
 
     <nav class="navbar navbar-default navbar-fixed-top">
@@ -49,9 +53,15 @@ body {
 
     <br><br>
 
-    <div id="container">
-      <h1>African Countries And Their Capitals Trivia</h1>
-      <p>There will be no points awarded for unanswered questions.</p><br />
+    <div id="container"><br />
+      <h1>
+        <font size="5.10px">
+          <strong>African Countries And Their Capitals Trivia</strong>
+        </font>
+      <br>
+      <font size="3px"><strong>NB:</strong> <u>There will be no points awarded for unanswered questions</u>.</font>
+      </h1>
+      <br />
       <div id="content">
         <h3 id="question"></h3>
         <div id="choices"></div>
@@ -59,153 +69,155 @@ body {
         <br><br><p id="score"></p>
       </div>
     </div>
+
     <script src="js/quiz.js"></script>
-  <script>
-var quiz = [{
-  "question": "What’s the capital of Angola?",
-  "choices": ["Yaounde", "Luanda", "Banjul", "Moroni"],
-  "correct": "Luanda"
-}, {
-  "question": "What’s the capital of Cameroon?",
-  "choices": ["Abidjan", "Praia", "Yaounde", "Malabo"],
-  "correct": "Yaounde"
-}, {
-  "question": "What’s the capital of Algeria?",
-  "choices": ["Accra", "Mombasa", "Port Harcourt", "Algiers"],
-  "correct": "Algiers"
-}, {
-  "question": "What’s the capital of Benin?",
-  "choices": ["Porto-Novo", "Abidjan", "Cairo", "Asmara"],
-  "correct": "Porto-Novo"
-}, {
-  "question": "What’s the capital of Botswana?",
-  "choices": ["Malabo", "Jos", "Gaborone", "Nairobi"],
-  "correct": "Gaborone"
-}, {
-  "question": "What’s the capital of Burkina Faso?",
-  "choices": ["Accra", "Ouagadougou", "Asmara", "Bangkok"],
-  "correct": "Ouagadougou" 
-}, {
-  "question": "What’s the capital of Burundi?",
-  "choices": ["Free Town", "Nairobi", "Bujumbura", "Brazzaville"],
-  "correct": "Bujumbura"
-}, {
-  "question": "What’s the capital of Central African Republic?",
-  "choices": ["Addis Ababa", "Praia", "Bangui", "Sunyani"],
-  "correct": "Bangui"
-}, {
-  "question": "What’s the capital of Cape Verde?",
-  "choices": ["Cape Town", "Libreville", "Bujumbura", "Praia"],
-  "correct": "Praia"
-}, {
-  "question": "What’s the capital of Chad?",
-  "choices": ["Malabo", "Monrovia", "Maseru", "N’Djamena"],
-  "correct": "N’Djamena"
-}];
+
+    <script>
+      var quiz = [{
+        "question": "What’s the capital of Angola?",
+        "choices": ["Yaounde", "Luanda", "Banjul", "Moroni"],
+        "correct": "Luanda"
+      }, {
+        "question": "What’s the capital of Cameroon?",
+        "choices": ["Abidjan", "Praia", "Yaounde", "Malabo"],
+        "correct": "Yaounde"
+      }, {
+        "question": "What’s the capital of Algeria?",
+        "choices": ["Accra", "Mombasa", "Port Harcourt", "Algiers"],
+        "correct": "Algiers"
+      }, {
+        "question": "What’s the capital of Benin?",
+        "choices": ["Porto-Novo", "Abidjan", "Cairo", "Asmara"],
+        "correct": "Porto-Novo"
+      }, {
+        "question": "What’s the capital of Botswana?",
+        "choices": ["Malabo", "Jos", "Gaborone", "Nairobi"],
+        "correct": "Gaborone"
+      }, {
+        "question": "What’s the capital of Burkina Faso?",
+        "choices": ["Accra", "Ouagadougou", "Asmara", "Bangkok"],
+        "correct": "Ouagadougou" 
+      }, {
+        "question": "What’s the capital of Burundi?",
+        "choices": ["Free Town", "Nairobi", "Bujumbura", "Brazzaville"],
+        "correct": "Bujumbura"
+      }, {
+        "question": "What’s the capital of Central African Republic?",
+        "choices": ["Addis Ababa", "Praia", "Bangui", "Sunyani"],
+        "correct": "Bangui"
+      }, {
+        "question": "What’s the capital of Cape Verde?",
+        "choices": ["Cape Town", "Libreville", "Bujumbura", "Praia"],
+        "correct": "Praia"
+      }, {
+        "question": "What’s the capital of Chad?",
+        "choices": ["Malabo", "Monrovia", "Maseru", "N’Djamena"],
+        "correct": "N’Djamena"
+      }];
 
 
-// define elements
-var content = $("content"),
-  questionContainer = $("question"),
-  choicesContainer = $("choices"),
-  scoreContainer = $("score"),
-  submitBtn = $("submit");
+      // define elements
+      var content = $("content"),
+        questionContainer = $("question"),
+        choicesContainer = $("choices"),
+        scoreContainer = $("score"),
+        submitBtn = $("submit");
 
-// init vars
-var currentQuestion = 0,
-  score = 0,
-  askingQuestion = true;
+      // init vars
+      var currentQuestion = 0,
+        score = 0,
+        askingQuestion = true;
 
-function $(id) { // shortcut for document.getElementById
-  return document.getElementById(id);
-}
-
-function askQuestion() {
-  var choices = quiz[currentQuestion].choices,
-    choicesHtml = "";
-
-  // loop through choices, and create radio buttons
-  for (var i = 0; i < choices.length; i++) {
-    choicesHtml += "<input type='radio' name='quiz" + currentQuestion +
-      "' id='choice" + (i + 1) +
-      "' value='" + choices[i] + "'>" +
-      " <label for='choice" + (i + 1) + "'>" + choices[i] + "</label><br>";
-  }
-
-  // load the question
-  questionContainer.textContent = "Q" + (currentQuestion + 1) + ". " +
-    quiz[currentQuestion].question;
-
-  // load the choices
-  choicesContainer.innerHTML = choicesHtml;
-
-  // setup for the first time
-  if (currentQuestion === 0) {
-    scoreContainer.textContent = "Score: 0 right answers out of " +
-      quiz.length + " possible.";
-    submitBtn.textContent = "Submit Answer";
-  }
-}
-
-function checkAnswer() {
-  // are we asking a question, or proceeding to next question?
-  if (askingQuestion) {
-    submitBtn.textContent = "Next Question";
-    askingQuestion = false;
-
-    // determine which radio button they clicked
-    var userpick,
-      correctIndex,
-      radios = document.getElementsByName("quiz" + currentQuestion);
-    for (var i = 0; i < radios.length; i++) {
-      if (radios[i].checked) { // if this radio button is checked
-        userpick = radios[i].value;
+      function $(id) { // shortcut for document.getElementById
+        return document.getElementById(id);
       }
 
-      // get index of correct answer
-      if (radios[i].value == quiz[currentQuestion].correct) {
-        correctIndex = i;
+      function askQuestion() {
+        var choices = quiz[currentQuestion].choices,
+          choicesHtml = "";
+
+        // loop through choices, and create radio buttons
+        for (var i = 0; i < choices.length; i++) {
+          choicesHtml += "<input type='radio' name='quiz" + currentQuestion +
+            "' id='choice" + (i + 1) +
+            "' value='" + choices[i] + "'>" +
+            " <label for='choice" + (i + 1) + "'>" + choices[i] + "</label><br>";
+        }
+
+        // load the question
+        questionContainer.textContent = "Q" + (currentQuestion + 1) + ". " +
+          quiz[currentQuestion].question;
+
+        // load the choices
+        choicesContainer.innerHTML = choicesHtml;
+
+        // setup for the first time
+        if (currentQuestion === 0) {
+          scoreContainer.textContent = "Score: 0 right answers out of " +
+            quiz.length + " possible.";
+          submitBtn.textContent = "Submit Answer";
+        }
       }
-    }
 
-    // setup if they got it right, or wrong
-    var labelStyle = document.getElementsByTagName("label")[correctIndex].style;
-    labelStyle.fontWeight = "bold";
-    if (userpick == quiz[currentQuestion].correct) {
-      score++;
-      labelStyle.color = "green";
-    } else {
-      labelStyle.color = "red";
-    }
+      function checkAnswer() {
+        // are we asking a question, or proceeding to next question?
+        if (askingQuestion) {
+          submitBtn.textContent = "Next Question";
+          askingQuestion = false;
 
-    scoreContainer.textContent = "Score: " + score + " right answers out of " +
-      quiz.length + " possible.";
-  } else { // move to next question
-    // setting up so user can ask a question
-    askingQuestion = true;
-    // change button text back to "Submit Answer"
-    submitBtn.textContent = "Submit Answer";
-    // if we're not on last question, increase question number
-    if (currentQuestion < quiz.length - 1) {
-      currentQuestion++;
-      askQuestion();
-    } else {
-      showFinalResults();
-    }
-  }
-}
+          // determine which radio button they clicked
+          var userpick,
+            correctIndex,
+            radios = document.getElementsByName("quiz" + currentQuestion);
+          for (var i = 0; i < radios.length; i++) {
+            if (radios[i].checked) { // if this radio button is checked
+              userpick = radios[i].value;
+            }
 
-function showFinalResults() {
-  content.innerHTML = 
-    "<h3>You've completed the quiz!</h3>" +
-    "<h3>Below are your results:</h3>" +
-    "<h3>" + score + " out of " + quiz.length + " questions, " + Math.round(score / quiz.length * 100) + "%<h3>" + 
-    "<br><h4><a href=''><u>Try again...!!</u></a></h4>";
-}
+            // get index of correct answer
+            if (radios[i].value == quiz[currentQuestion].correct) {
+              correctIndex = i;
+            }
+          }
 
-window.addEventListener("load", askQuestion, false);
-submitBtn.addEventListener("click", checkAnswer, false);
-</script>
+          // setup if they got it right, or wrong
+          var labelStyle = document.getElementsByTagName("label")[correctIndex].style;
+          labelStyle.fontWeight = "bold";
+          if (userpick == quiz[currentQuestion].correct) {
+            score++;
+            labelStyle.color = "green";
+          } else {
+            labelStyle.color = "red";
+          }
 
-</body>
+          scoreContainer.textContent = "Score: " + score + " right answers out of " +
+            quiz.length + " possible.";
+        } else { // move to next question
+          // setting up so user can ask a question
+          askingQuestion = true;
+          // change button text back to "Submit Answer"
+          submitBtn.textContent = "Submit Answer";
+          // if we're not on last question, increase question number
+          if (currentQuestion < quiz.length - 1) {
+            currentQuestion++;
+            askQuestion();
+          } else {
+            showFinalResults();
+          }
+        }
+      }
+
+      function showFinalResults() {
+        content.innerHTML = 
+          "<h3>You've completed the quiz!</h3>" +
+          "<h3>Below are your results:</h3>" +
+          "<h3>" + score + " out of " + quiz.length + " questions, " + Math.round(score / quiz.length * 100) + "%<h3>" + 
+          "<br><h4><a href=''><u>Try again...!!</u></a></h4>";
+      }
+
+      window.addEventListener("load", askQuestion, false);
+      submitBtn.addEventListener("click", checkAnswer, false);
+    </script>
+
+  </body>
 </html>
