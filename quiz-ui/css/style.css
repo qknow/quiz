@@ -1,0 +1,96 @@
+/* Styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #f5f5f5;
+}
+
+
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+
+body > .container {
+  padding: 10px 15px 0;
+}
+.container .text-muted {
+  margin: 20px 0;
+}
+
+.footer > .container {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+code {
+  font-size: 80%;
+}
+
+/* Tablet and bigger */
+@media ( min-width: 768px ) {
+  .grid-divider {
+    position: relative;
+    padding: 0;
+  }
+  .grid-divider>[class*='col-'] {
+    position: static;
+  }
+  .grid-divider>[class*='col-']:nth-child(n+2):before {
+    content: "";
+    border-left: 1px solid #DDD;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+  }
+  .col-padding {
+    padding: 0 15px;
+  }
+}
+
+.btn.btn-round {
+  padding: 8px 25px;   
+  text-shadow: none;
+  box-shadow: none;
+  transition: all 0.12s linear 0s !important; 
+  color: #fff;
+  font-weight: 600; 
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+}
+    
+.btn-round.color1 {
+  background-color:#344D90;
+  border-color:#344D90;
+
+}
+.btn-round.color2 {
+  background-color:#5CC5EF;
+  border-color:#5CC5EF;
+
+}
+.btn-round.color3 {
+  background-color:#FFB745;
+  border-color:#FFB745;
+
+}
+.btn-round.color4 {
+  background-color:#E7552C;
+  border-color:#E7552C;
+}
+
+.btn.btn-round:focus, .btn.btn-round:hover {
+  color:#fff;   
+}
